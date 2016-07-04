@@ -9,14 +9,13 @@ var WelcomeMsg = React.createClass({
 				<input type="text"
 					   value={this.props.name}
 					   onChange={this.props.handleNameChange} />
-				
 				<span>Welcome {this.props.name}! Before we present you with options, let's understand your use case!</span>
-				<button onClick={ this.saveAndContinue }>Save and Continue</button>
+				<button onClick={ this.start }>Start</button>
 			</div>
 		)
 	},
 
-	saveAndContinue: function(e) {
+	start: function(e) {
 		e.preventDefault();
 	}
 });

@@ -1,7 +1,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/views/main.handlebars',
-  filename: 'index.html',
+  filename: '../index.html',
   inject: 'body'
 });
 
@@ -11,7 +11,7 @@ module.exports = {
 		'./components/app.js'
 	],
 	output: {
-	    path: __dirname + '/public/',
+	    path: __dirname + '/public/js',
 	    filename: "index_bundle.js"
 	  },
 	  module: {

@@ -23,7 +23,9 @@ var MainMsgBox = React.createClass({
 		switch(this.state.stage) {
 			case 0:
 				return (
-					<WelcomeMsg name={this.state.name} nameChange={this.handleNameChange} />
+					<form>
+					<WelcomeMsg name={this.state.name} handleNameChange={this.handleNameChange} />
+					</form>
 					);
 		}
 	}
