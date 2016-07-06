@@ -4,7 +4,7 @@ var WelcomeMsg = React.createClass({
 	render: function() {
 		return(
 			//onChange is a REACT-specific tag to handle the onCHange event
-			<div>
+			<div className="formDiv">
 				<label>Name</label>
 				<input type="text"
 					   value={this.props.name}
@@ -17,6 +17,7 @@ var WelcomeMsg = React.createClass({
 
 	start: function(e) {
 		e.preventDefault();
+		this.props.handleSubmit();
 	}
 });
 
