@@ -19,7 +19,7 @@ router.get('/query', function(req, res) {
 
 app.use('/api', router);
 
-var server = http.createServer(app).listen(port, function() {
+var server = http.createServer(app).listen(port, "0.0.0.0", function() {
   console.log('Listening on port ' + port);
 });
 

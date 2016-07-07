@@ -10,7 +10,7 @@ app.use("/", express.static(__dirname + "/public/"));
 
 app.get('/', routes.index);
 
-var server = http.createServer(app).listen(port, function() {
+var server = http.createServer(app).listen(port, "0.0.0.0", function() {
   console.log('Listening on port ' + port);
 });
 
