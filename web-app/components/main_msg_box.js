@@ -90,6 +90,7 @@ var MainMsgBox = React.createClass({
 								options={trueFalseOptions} 
 								handleUpdate={this.updateSysInfo}
 								handleNext={this.nextStage}
+								noIncr="3"
 								type="radio" 
 								name="msg1" />
 					);
@@ -164,10 +165,21 @@ var MainMsgBox = React.createClass({
 	    }.bind(this));
 	},
 
-	nextStage: function() {
-	  this.setState({
-	    stage : this.state.stage + 1
-	  })
+	nextStage: function(incr) {
+
+		var stage = this.state.stage;
+
+		if (incr) {
+			stage += parseInt(incr);
+		}
+
+		else {
+			stage += 1;
+		}
+
+		this.setState({
+		stage : stage
+		})
 	},
 
 	prevStage: function() {

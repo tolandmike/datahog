@@ -49,7 +49,14 @@ var OptionForm = React.createClass({
 
 	nextClick: function(e) {
 		e.preventDefault();
-		this.props.handleNext();
+
+		if (this.props.noIncr) {
+			this.props.handleNext(this.props.noIncr);
+		}
+
+		else {
+			this.props.handleNext();
+		}
 	}
 });
 
